@@ -4,7 +4,6 @@ import server.employee.ChiefSecretary;
 
 import java.io.*;
 import java.net.ServerSocket;
-import java.net.Socket;
 
 /**
  * Created by sinaikashipazha on 12/21/15.

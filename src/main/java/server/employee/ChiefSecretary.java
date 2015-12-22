@@ -12,7 +12,7 @@ import java.util.ArrayList;
  */
 
 public class ChiefSecretary {
-    private class Secretary implements server.employee.Secretary {
+    private class Secretary implements Runnable {
         private Thread thread;
         private Socket client;
         private PrintWriter out;
