@@ -34,8 +34,8 @@ public class ChiefSecretary {
             thread.start();
         }
 
-        public Socket getClient(){
-            return client;
+        public Thread.State getThreadState(){
+            return thread.getState();
         }
 
         @Override
@@ -72,7 +72,7 @@ public class ChiefSecretary {
 
     public void giveBrieflessSecretaryThisClient( Socket client ){
         for(Secretary secretary : pool)
-            if( secretary.getClient() == null){
+            if( secretary.getThreadState() == Thread.State.NEW){
                 secretary.setClient(client);
                 return;
             }
